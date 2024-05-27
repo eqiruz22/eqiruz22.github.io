@@ -2,11 +2,15 @@ var p;
 var nama;
 do {
   nama = prompt("masukan nama kamu");
-  if (nama.includes("sheilla")) {
+  if (nama.toLocaleLowerCase().includes("sheilla")) {
     p = prompt(
       "hello, " + nama + " kamu cantik banget, mau jadi pacar aku ga ?"
     );
-    if (p.includes("mau") || p.includes("iya") || p.includes("aku mau")) {
+    if (
+      p.toLocaleLowerCase().includes("mau") ||
+      p.toLocaleLowerCase().includes("iya") ||
+      p.toLocaleLowerCase().includes("aku mau")
+    ) {
       alert("Love you " + nama);
       document.getElementById("response").innerText = "Love you " + nama + "😘";
     } else {
@@ -15,4 +19,10 @@ do {
   } else {
     alert("kamu bukan sheilla ya");
   }
-} while (!(p.includes("mau") || p.includes("iya") || p.includes("aku mau")));
+} while (
+  !(
+    p.toLocaleLowerCase().includes("mau") ||
+    p.toLocaleLowerCase().includes("iya") ||
+    p.toLocaleLowerCase().includes("aku mau")
+  )
+);
